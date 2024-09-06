@@ -1,73 +1,97 @@
-###**Implement POM for an E2E flow using Cypress**###.
-
-### Sample `README.md` in This Cypress Project Using POM model
+### README.md for the POM Assignment
 
 ```md
-# CypressPOM
+# Cypress Page Object Model (POM) Assignment
 
-This project is an end-to-end testing automation framework built using Cypress with the Page Object Model (POM) design pattern. It is designed to automate the testing of web applications efficiently.
+This project implements an end-to-end (E2E) flow using Cypress and the Page Object Model (POM) design pattern. The flow is based on the OrangeHRM demo site, and the goal is to automate various scenarios using Cypress, ensuring a clean and maintainable code structure.
 
-## Table of Contents
+## Objective
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Writing Tests](#writing-tests)
-- [Contributing](#contributing)
-- [License](#license)
+The objective of this assignment is to develop a POM framework for an E2E flow on the OrangeHRM demo site. The scenarios covered include logging in as an admin, creating a new employee, updating employee information, searching for employees, and more.
 
-## Introduction
+## Scenarios to Implement
 
-This repository contains automated tests for a web application using Cypress. The tests are organized using the Page Object Model (POM) approach to enhance code reusability and maintainability.
+1. **Login as Admin**
+   - **URL**: [OrangeHRM Demo](https://opensource-demo.orangehrmlive.com/)
+   - **Credentials**: Use the provided admin credentials.
+   - **Validation**: Assert that the dashboard is visible after a successful login.
 
-## Features
+2. **Create a New Employee**
+   - Navigate to the PIM module and click the Add button.
+   - Generate random employee data using the Faker library.
+   - Enter the employee's first name and last name generated from Faker.
+   - Toggle "Create Login Details" and enter login information.
+   - Generate a strong random password with a mix of upper/lower case letters, symbols, and numbers.
+   - Save the employee's ID, username, and password into a JSON file.
+   - **Validation**:
+     - Assert that the employee was created successfully.
+     - Assert that the employee's profile displays the correct full name.
 
-- End-to-end testing using Cypress
-- Organized test code using Page Object Model (POM)
-- Supports different environments and configurations
-- Easy to extend with new test cases
-- Real-time reporting with Cypress dashboard
+3. **Update Employee Information**
+   - Navigate to the Employee page.
+   - Update the nationality of the employee.
+   - Save the updated nationality.
+   - **Validation**:
+     - Assert that the success message appears.
+     - Assert that the updated nationality is correctly saved.
 
-## Installation
+4. **Search by Employee ID**
+   - Go to the PIM module and search for the employee using the ID created earlier.
+   - **Validation**: Assert that the employee is found in the search results.
 
-To set up and run this project locally, follow these steps:
+5. **Search in Directory by Employee Name**
+   - Navigate to the Directory menu and search for the employee by name.
+   - **Validation**: Assert that the employee is found in the directory.
 
-1. **Clone the repository:**
+6. **Logout**
+   - Log out from the admin session.
+
+7. **Login with New Employee Credentials**
+   - Use the newly created employee credentials from the JSON file to log in.
+   - **Validation**: Assert that the full name is displayed beside the profile icon.
+
+8. **Update My Info**
+   - Navigate to the "My Info" section.
+   - Select Gender and Blood Type (O+).
+   - Save the changes.
+   - **Validation**: Assert that the changes are saved successfully.
+
+9. **Logout as New Employee**
+   - Log out from the newly created employee session.
+
+## Requirements
+
+- Avoid using absolute locators.
+- Implement custom commands to enhance code reusability.
+- Minimize code duplication by adhering to the DRY (Don't Repeat Yourself) principle.
+- Add documentation when implementing any methods.
+- Create a `README.md` file to document the project.
+
+## Setup Instructions
+
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/RuhulAminDSi/CypressPOM.git
+   git clone https://github.com/YourUsername/YourRepository.git
    ```
-2. **Navigate to the project directory:**
+2. **Navigate to the project directory**:
    ```bash
-   cd CypressPOM
+   cd YourRepository
    ```
-3. **Install dependencies:**
-   Ensure that Node.js and npm are installed. Then run:
+3. **Install dependencies**:
    ```bash
    npm install
    ```
-4. **Open Cypress Test Runner:**
-   After the installation, run:
-   ```bash
-   npx cypress open
-   ```
-   This will open the Cypress Test Runner where you can run your test cases.
-
-## Usage
-
-- To run all tests in headless mode (e.g., for CI/CD pipelines):
-  ```bash
-  npx cypress run
-  ```
-- To run a specific test:
-  ```bash
-  npx cypress run --spec "cypress/e2e/pom.cy.js"
-  ```
+4. **Run the tests**:
+   - To open the Cypress Test Runner:
+     ```bash
+     npx cypress open
+     ```
+   - To run the tests in headless mode:
+     ```bash
+     npx cypress run
+     ```
 
 ## Folder Structure
-
-The folder structure of this project follows the best practices for Cypress and POM:
 
 ```bash
 CypressPOM/
@@ -83,38 +107,19 @@ CypressPOM/
 └── README.md                   # Project documentation
 ```
 
-## Writing Tests
-
-- All test cases are written in the `cypress/e2e/` directory.
-- The Page Object Model files are stored in the `cypress/support/PageObjs/` directory, making the test code reusable and maintainable.
-  
-Example test:
-
-```javascript
-describe('Sample Test', () => {
-    it('should visit the homepage and check the title', () => {
-        cy.visit('/');
-        cy.title().should('include', 'Home');
-    });
-});
-```
-
 ## Contributing
 
-Contributions are welcome! If you would like to contribute to this project, please fork the repository, create a new branch, and submit a pull request.
+If you would like to contribute to this project, please fork the repository, create a new branch, and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 ```
 
-### Key Sections to Update
-1. **Introduction**: Provide an overview of your project.
-2. **Installation**: Include steps on how to set up the project.
-3. **Usage**: Add commands for running the tests.
-4. **Folder Structure**: Customize the structure based on your project layout.
-5. **Writing Tests**: Provide examples of how to write and organize tests.
-6. **Contributing**: Include your contribution guidelines.
-7. **License**: Specify the license for your project.
+### Notes:
+- **Objective and Scenarios**: This section covers the key tasks and goals as outlined in your PDF.
+- **Setup Instructions**: Provides commands for setting up and running the project.
+- **Requirements**: Highlights important coding practices such as avoiding absolute locators and minimizing code duplication.
+- **Folder Structure**: Reflects a typical Cypress POM project structure.
 
-This template will help other developers understand and contribute to your Cypress project efficiently.
+You can modify the placeholder information (e.g., repository URL) as needed for your specific project.
