@@ -1,6 +1,6 @@
 ###**Implement POM for an E2E flow using Cypress**###.
 
-### Sample `README.md` This Cypress Project Using POM model
+### Sample `README.md` in This Cypress Project Using POM model
 
 ```md
 # CypressPOM
