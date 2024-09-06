@@ -1,4 +1,4 @@
-To create a `README.md` file for your Cypress project, you can follow this template and customize it as needed. This will help others understand the purpose of your project, how to set it up, and how to use it.
+###**Implement POM for an E2E flow using Cypress**###.
 
 ### Sample `README.md` Template for a Cypress Project
 
