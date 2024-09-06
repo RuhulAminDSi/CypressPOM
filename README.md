@@ -111,15 +111,8 @@ CypressPOM/
 
 If you would like to contribute to this project, please fork the repository, create a new branch, and submit a pull request.
 
-## License
+## Others
 
-This project is licensed under the MIT License.
-```
 
-### Notes:
-- **Objective and Scenarios**: This section covers the key tasks and goals as outlined in your PDF.
-- **Setup Instructions**: Provides commands for setting up and running the project.
-- **Requirements**: Highlights important coding practices such as avoiding absolute locators and minimizing code duplication.
-- **Folder Structure**: Reflects a typical Cypress POM project structure.
 
 You can modify the placeholder information (e.g., repository URL) as needed for your specific project.
