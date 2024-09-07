@@ -71,7 +71,7 @@ The scenarios covered include logging in as an admin, creating a new employee, u
 
 
 
-##Setup Instructions
+# Setup Instructions
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/YourUsername/YourRepository.git
