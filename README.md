@@ -1,4 +1,4 @@
-### README.md for the POM Assignment
+# README.md for the POM Assignment
 
 ```md
 # Cypress Page Object Model (POM) Assignment
@@ -71,9 +71,6 @@ The scenarios covered include logging in as an admin, creating a new employee, u
 
 
 
-
-
-
 ##Setup Instructions
 1. **Clone the repository**:
    ```bash
@@ -101,24 +98,45 @@ The scenarios covered include logging in as an admin, creating a new employee, u
 
 ```bash
 CypressPOM/
+├── .idea/
 ├── cypress/
-│   ├── e2e/                   # Test files
+│   ├── e2e/                    # Test files
+│   │   ├── pom.cy.js
 │   ├── fixtures/               # Test data (JSON files)
+│   │   ├── employeeData.json 
+│   ├── pages/
 │   ├── support/
 │   │   ├── PageObjs/           # Page Object Model files
-│   │   ├── commands.js         # Custom Cypress commands
-│   │   └── index.js            # Global configurations and behavior
+│   │   │   ├── AddEmployeePage.js
+│   │   │   ├── DashboardPagee.js
+│   │   │   ├── EmployeeInfo.js
+│   │   │   ├── JsonReadWrite.js
+│   │   │   ├── LoginPage.js
+│   │   │   ├── LogoutPage.js
+│   │   │   ├── PIMPage.js
+│   │   │   ├── Reusables.js
+│   │   │   ├── UpdateEmployeeInfo.js
+│   │   ├── Wire/               #Wiring Files
+│   │   │   ├── AddEmployeeObj.js
+│   │   │   ├── DashboardPageObj.js
+│   │   │   ├── LoginPageObj.js
+│   │   │   ├── LogoutPageObj.js
+│   │   │   ├── PIMPageObj.js
+│   │   │   ├── UpdateEmployeeInfoObj.js
+│   │   ├── command.js          # Custom Cypress commands
+│   │   └── e2e.js            # Global configurations and behavior
+├── node_modules/
 ├── cypress.config.js           # Cypress configuration file
 ├── package.json                # Project dependencies and scripts
+├── package-lock.json 
 └── README.md                   # Project documentation
 ```
 
 ## Contributing
 
 If you would like to contribute to this project, please fork the repository, create a new branch, and submit a pull request.
-## Cypress Related
-Here’s a sample README text based on your instructions:
 
+## Cypress Related
 ---
 
 # Cypress Automation Setup
