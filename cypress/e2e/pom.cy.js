@@ -28,11 +28,11 @@ describe('OrangeHRM End to End Testing', () => {
         cy.intercept({ resourceType: /xhr|fetch/ }, { log: false });
         cy.login();
     });
-    // afterEach(()=>{
-    //     cy.logout();
-    // })
+    afterEach(()=>{
+        cy.logout();
+    })
 
-    it('Validate the whole OrangeHRM flow', () => {
+    it('Validate the whole OrangeHRM flow for Admin', () => {
         const adminUserName = "Admin"
         const adminPassword = "admin123"
         cy.loginUser(adminUserName, adminPassword)
@@ -55,9 +55,8 @@ describe('OrangeHRM End to End Testing', () => {
         })
     })
 
-    it('New User',()=> {
+    it('Validate Flow for New User',()=> {
         cy.readFile(`cypress/fixtures/employeeData.json`).then((employee) => {
-
             const username = employee[0].username
             const password = employee[0].password
             const fullName = employee[0].fullname;

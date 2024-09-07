@@ -70,19 +70,21 @@ The scenarios covered include logging in as an admin, creating a new employee, u
 - Create a `README.md` file to document the project.
 
 
-
+    
 # Setup Instructions
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/YourUsername/YourRepository.git
+   git clone https://github.com/RuhulAminDSi/CypressPOM.git
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd YourRepository
+   cd CypressPOM
    ```
 3. **Install dependencies**:
    ```bash
    npm install
+   cypress install    //if not installed
+   cypress version    //check installed or not
    ```
 4. **Run the tests**:
    - To open the Cypress Test Runner:

@@ -1,10 +1,10 @@
 export class Reusables{
     generateRandomPassword() {
-        const allChars = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?'
         const lowercase = 'abcdefghijklmnopqrstuvwxyz';
         const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         const numbers = '0123456789';
         const specialChars = '!@#$%^&*()_+[]{}|;:,.<>?';
+        const allChars = lowercase + uppercase + numbers + specialChars;
         const upper = uppercase.charAt(Math.floor(Math.random() * uppercase.length));
         const lower = lowercase.charAt(Math.floor(Math.random() * lowercase.length));
         const num = numbers.charAt(Math.floor(Math.random() * numbers.length));
