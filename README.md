@@ -112,7 +112,6 @@ CypressPOM/
 │   │   │   ├── AddEmployeePage.js
 │   │   │   ├── DashboardPagee.js
 │   │   │   ├── EmployeeInfo.js
-│   │   │   ├── JsonReadWrite.js
 │   │   │   ├── LoginPage.js
 │   │   │   ├── LogoutPage.js
 │   │   │   ├── PIMPage.js

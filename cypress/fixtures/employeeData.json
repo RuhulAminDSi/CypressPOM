@@ -1,8 +1,11 @@
 [
   {
-    "username": "AllieWolff",
-    "password": "$Rc,aK]M3)i",
-    "fullname": "Allie Wolff",
-    "EmployeeId": "0385"
+    "firstName": "Alia",
+    "lastName": "Volkman",
+    "Username": "AliaVolkman",
+    "Password": "b4b1O+pa{tC",
+    "Confirm Password": "b4b1O+pa{tC",
+    "fullname": "Alia Volkman",
+    "EmployeeId": "0415"
   }
 ]

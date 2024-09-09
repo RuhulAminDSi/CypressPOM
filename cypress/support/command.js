@@ -12,6 +12,7 @@ Cypress.Commands.add("waitTillVisible",(selector,timeout=5000)=>{
 });
 
 Cypress.Commands.add('login', () =>{
+    cy.intercept({ resourceType: /xhr|fetch/ }, { log: false });
     cy.visit('/')
     cy.title().should("eq", "OrangeHRM")
 })

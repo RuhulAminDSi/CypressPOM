@@ -1,49 +1,44 @@
+import {Null} from "asn1/lib/ber/types";
+
 const addd = "button[type='button']:contains('Add')"
 
 const getId = "label:contains('Employee Id')"
+const getIdd = "label:contains";
 const firstName = "input[name='firstName']"
 const lastName = "input[name='lastName']"
 const toggleCheckbox = "label span"
-const username = "label:contains('Username')"
-const password = "label:contains('Password'):not(:contains('Confirm'))"
-const confirmPassword = "label:contains('Confirm Password')"
+const label = "label:contains";
 const saveButton = "button[type='submit']"
 const successMessage = "p[class*='oxd-text--toast-message']"
-const fullNameAssert = 'h6'
+const fullNameAssert = "h6:contains"
 const  rowId = ".oxd-table-cell";
 const fullName = 'label:contains("Employee Name")'
 const span = '.oxd-autocomplete-option > span';
 const rowName = ".orangehrm-directory-card-header";
 const profileName = 'p.oxd-userdropdown-name';
-const myInfo = 'span:contains("My Info")'
+const sidemenu = 'ul li a span:contains'
+
 export class AddEmployeeObj{
+    getMenu(data){
+      return sidemenu + `(${data})`;
+    }
     getAddButton(){
         return addd;
     }
     getEmployeeIdInput() {
         return getId
     }
-
-    getFirstName(){
-        return firstName
+    getEmployeeIddInput(label){
+        return getIdd+`(${label})`;
     }
-    getLastName(){
-        return lastName
+    getName(content){
+        return content === 'firstName'? firstName:lastName;
     }
-    getFullName(){
-        return fullName;
+    getDetails(data){
+        return label + `(${data})`+ (data==='Password'? `:not(:contains('Confirm'))`:`` );
     }
     getToggleCheckbox(){
         return toggleCheckbox
-    }
-    getUsername(){
-        return username
-    }
-    getPassword(){
-        return password
-    }
-    getConfirmPassword(){
-        return confirmPassword
     }
     getSaveButton(){
         return saveButton
@@ -51,8 +46,8 @@ export class AddEmployeeObj{
     getSuccessMessage(){
         return successMessage
     }
-    getfullNameAssert(){
-        return fullNameAssert;
+    getfullNameAssert(fullname){
+        return fullNameAssert + `(${fullname})`;
     }
     getRow(){
         return rowId;
@@ -65,9 +60,6 @@ export class AddEmployeeObj{
     }
     getProfileName(){
         return profileName;
-    }
-    getMyInfo(){
-        return myInfo
     }
 
 

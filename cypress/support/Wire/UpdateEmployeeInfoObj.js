@@ -1,12 +1,12 @@
-const emp = 'label:contains("Nationality")'
+const labeldrop = 'label:contains';
 const dropdown = '.oxd-select-text-input'
 const getSave = 'button[type="submit"]'
 const gender = 'label:contains("Male")'
 const saveGender = 'input[type="radio"][value="1"]';
 const bg = 'label:contains("Blood Type")'
 export class UpdateEmployeeInfoObj{
-    getNationality(){
-        return emp;
+    getDropMenu(data){
+        return labeldrop + `(${data})`;
     }
     getDropdown(){
         return dropdown
@@ -16,12 +16,6 @@ export class UpdateEmployeeInfoObj{
     }
     getGender(){
         return gender
-    }
-    getSaveGender(){
-        return saveGender
-    }
-    getBg(){
-        return bg;
     }
 
 }
