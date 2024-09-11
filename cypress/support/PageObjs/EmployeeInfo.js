@@ -29,18 +29,18 @@ export class EmployeeInfo{
         cy.get(addEmp.getSaveButton()).click().wait(2000)
         return this;
     }
-    //assertion
+    //assertion of success message
     assertSuccessMessage(text){
         cy.get(addEmp.getSuccessMessage()).should("have.text", `Successfully ${text}`)
         return (text === 'Saved')? this : update
     }
-    //Assert value
+    //employee name assertion in employee details page and profile icon
     nameAssert(contain, fullName){
         cy.get(contain === 'empdetails'? addEmp.getfullNameAssert(fullName):addEmp.getProfileName(fullName)).should("have.text", fullName)
         if(contain === 'empdetails') this.employeeDetails.fullname = fullName;
         return  contain === 'empdetails'? update: this;
     }
-
+   // search value assertion for both employee id and employee name search
     assertValue(input){
         const digitRegex = /^\d+$/;
             cy.get((digitRegex.test(input))?addEmp.getRow():addEmp.getRowName()).invoke('text')
@@ -52,6 +52,7 @@ export class EmployeeInfo{
                 })
             return this
     }
+    //enter employee ID
     enterId(){
         cy.get(addEmp.getEmployeeIdInput()).parent().siblings('div').find('input')
             .invoke('val').then((value)=>{
@@ -59,6 +60,7 @@ export class EmployeeInfo{
         })
         return this
     }
+    //getFirstName, GetLastName
     inputAnything(content, data){
         cy.get(addEmp.getName(content)).type(data);
         this.employeeDetails[content] = data;
@@ -68,6 +70,7 @@ export class EmployeeInfo{
         cy.get(addEmp.getToggleCheckbox()).click()
         return this
     }
+    //enter username, password, confirm password
     enterEmployeeDetails(content, data){
         cy.get(addEmp.getDetails(content)).parent().siblings('div').find('input')
             .type(data)
@@ -78,7 +81,7 @@ export class EmployeeInfo{
         cy.get(addEmp.getSaveButton()).click()
         return this
     }
-
+   //write a json file from the created constructor earlier and  get obj
     writeJson() {
         // Read the existing data from the file
         cy.readFile(`cypress/fixtures/${employeeData}`).then((data) => {

@@ -16,7 +16,7 @@ describe('Test Page', () =>{
     it('For each user', ()=>{
         cy.intercept({ resourceType: /xhr|fetch/ }, { log: false });
         loginPage.login('admin', 'admin123')
-            .viewPim()
+
 
     })
 
