@@ -1,6 +1,6 @@
 # README.md for the POM Assignment
 
-```md
+md
 # Cypress Page Object Model (POM) Assignment
 
 This project implements an end-to-end (E2E) flow using Cypress and the Page Object Model (POM) design pattern.
@@ -69,7 +69,7 @@ The scenarios covered include logging in as an admin, creating a new employee, u
 - Add documentation when implementing any methods.
 - Create a `README.md` file to document the project.
 
-```
+
     
 # Setup Instructions
 1. **Clone the repository**:
